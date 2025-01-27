@@ -1,0 +1,62 @@
+/* Contendor del formulario */
+.search-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /*Espaciadoentre elementos */
+  margin-top: 20px;
+}
+
+/* Input de texto */
+input[type="text"] {
+  border: 2px solid #ccc; /*Borde mas destacado */
+  padding: 8px 18px; /*Mas espacio interno */
+  border-radius: 8px; /*Borde redondeado*/
+  width: 40%; /*ajusta el ancho*/
+  font-size: 1rem; /*Ajusta el tamaño del texto*/
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]{ 
+  border-color: #007bff;/*cambia el color del borde al hacer foco */
+  box-shadow: 0 0 5px rgba(0, 123, 123, 0.5); /*Sombra azul*/
+  outline: none;/*Elimina el borde predeterminado*/
+}
+
+/*Boton*/
+button.primary {
+  padding: 10px 20px; /*mas espacio interno*/
+  background: linear-gradient(45deg, #007bff, #0056b3); /* Gradiente llamativo */
+  color: #fff; /* Texto blanco */
+  font-size: 1rem; /* Tamaño de texto */
+  font-weight: bold; /* Texto en negrita */
+  border: none; /* Elimina el borde predeterminado */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Manita al pasar por encima */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button.primary:hover {
+  transform: scale(1.05); /* Pequeño aumento al pasar el cursor */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+  background: linear-gradient(45deg, #0056b3, #003f8a); /* Cambia el gradiente */
+}
+
+button.primary:active {
+  transform: scale(0.95); /* Reducir ligeramente al hacer clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+  input[type="text"] {
+    width: 60%; /* Más ancho en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 499px) {
+  input[type="text"] {
+    width: 80%; /* Más ancho en pantallas muy pequeñas */
+  }
+}

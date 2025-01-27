@@ -1,0 +1,29 @@
+/* Para el header */
+.header-container {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center; /* Centra el texto */
+  padding: 20px; /* Espaciado interno */
+  background-color: #f8f9fa; /* Fondo claro para destacar */
+  
+}
+
+/* Para el logo */
+.brand-logo {
+  width: 150px; /* Ajusta el tamaño para ser más llamativo */
+  height: auto; /* Mantén las proporciones */
+  margin-bottom: 10px; /* Espaciado debajo del logo */
+  border-radius: 10px; /* Bordes redondeados */
+  
+}
+
+/* Para el título */
+h1 {
+  margin: 0;
+  font-size: 1.5rem; /* Hazlo más grande */
+  color: #2c3e50; /* Color más atractivo */
+  font-weight: bold; /* Texto en negrita */
+  font-family: "Arial", sans-serif; /* Cambia el tipo de letra */
+}
