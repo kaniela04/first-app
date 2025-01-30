@@ -1,44 +1,43 @@
 .listing {
-    background: var(--accent-color); /* Define el color de fondo usando una variable personalizada. Cambia según el tema o configuración. */
-    border-radius: 30px; /* Redondea las esquinas del contenedor (todas las esquinas). */
-    padding-bottom: 30px; /* Añade un espacio en la parte inferior del contenedor. */
-  }
-  
-  .listing-heading {
-    color: var(--primary-color); /* Cambia el color del texto según la variable del color principal (se adapta al tema). */
-    padding: 10px 20px 0 20px; /* Añade un margen interno (padding): 
-                                  - 10px arriba
-                                  - 20px a la derecha e izquierda
-                                  - 0px abajo. */
-  }
-  
-  .listing-photo {
-    height: 250px; /* Fija la altura de la imagen en 250px. */
-    width: 100%; /* Hace que la imagen ocupe el ancho completo de su contenedor. */
-    object-fit: cover; /* Hace que la imagen se recorte proporcionalmente para llenar el espacio disponible, sin deformarse. */
-    border-radius: 30px 30px 0 0; /* Redondea solo las esquinas superiores: 
-                                     - 30px para las esquinas superiores izquierda y derecha
-                                     - 0px para las esquinas inferiores. */
-  }
-  
-  .listing-location {
-    padding: 10px 20px 20px 20px; /* Añade un margen interno (padding): 
-                                     - 10px arriba
-                                     - 20px derecha, izquierda e inferior. */
-  }
-  
-  .listing-location::before {
-    content: url("/assets/location-pin.svg"); /* Inserta un ícono (en este caso, un pin de ubicación) antes del texto. */
-  }
-  
-  section.listing a {
-    padding-left: 20px; /* Añade un espacio a la izquierda del enlace (padding interno). */
-    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces. */
-    color: var(--primary-color); /* Cambia el color del texto del enlace según la variable del color principal. */
-  }
-  
-  section.listing a::after {
-    content: "\203A"; /* Inserta un carácter especial (flecha hacia la derecha) al final del enlace. */
-    margin-left: 5px; /* Añade un espacio entre el texto del enlace y el carácter especial. */
-  }
-  
+  background: #f3f3f3; /* Color de fondo */
+  border-radius: 15px; /* Bordes redondeados */
+  overflow: hidden; /* Evita que el contenido sobresalga */
+  width: 250px; /* Ajusta el tamaño */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+  transition: transform 0.2s ease-in-out;
+}
+
+.listing:hover {
+  transform: scale(1.05); /* Pequeño efecto de zoom al pasar el mouse */
+}
+
+.listing-photo {
+  width: 100%;
+  height: 150px; /* Ajusta la altura */
+  object-fit: cover; /* Asegura que la imagen se recorte bien sin deformarse */
+  border-radius: 15px 15px 0 0; /* Bordes redondeados solo arriba */
+}
+
+.listing-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.listing-heading {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin: 5px 0;
+}
+
+.listing-location {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-icon {
+  margin-right: 5px;
+}
