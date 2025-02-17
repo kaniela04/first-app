@@ -5,9 +5,13 @@
     alt="Exterior photo of {{housingLocation.name}}"
     />
     <div class="listing-info">
-        <h2 class="listing-heading">{{ housingLocation.name }}</h2>
+        <h2 class="listing-heading">{{ housingLocation.name }} 
+          <p></p>
+          $
+          {{housingLocation.price}}
+        </h2>
         <p class="listing-location">
-          <span class="location-icon">📍</span> 
+          <span class="location-icon"> 📍</span>
           {{ housingLocation.city }}, {{ housingLocation.state }}
         </p>
       </div>

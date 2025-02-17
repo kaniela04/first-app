@@ -1,5 +1,6 @@
 export interface Housinglocation {
     id: number;
+    price:number;
     name:string;
     city: string;
     state: string;

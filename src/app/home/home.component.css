@@ -5,6 +5,19 @@
   align-items: center;
   gap: 8px; /*Espaciadoentre elementos */
   margin-top: 20px;
+  margin-bottom: 30px;
+}
+.results {
+  display: flex; /* Alinea las casas en fila */
+  flex-wrap: wrap; /* Permite que pasen a la siguiente línea si no caben */
+  gap: 30px; /* Espaciado entre elementos */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  padding: 30px;
+}
+
+app-housing-location {
+  width: 300px; /* Ajusta el tamaño de cada tarjeta */
+  flex-shrink: 0; /* Evita que se reduzcan demasiado */
 }
 
 /* Input de texto */

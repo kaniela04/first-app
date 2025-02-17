@@ -1,23 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { Housinglocation } from '../housinglocation';
+import { HousingService } from '../housing.service';
+
 @Component({
   selector: 'app-home',
-  imports: [HousingLocationComponent],
+  standalone: true,
+  imports: [CommonModule, HousingLocationComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  readonly baseUrl = 'https://img.freepik.com/foto-gratis/casa-aislada-campo_1303-23773.jpg';
+  housingService = inject(HousingService); //  Inyección del servicio
+  housingLocationList: Housinglocation[] = [];
 
-  housinglocation: Housinglocation = {
-    id: 99990,
-    name: 'House-Cottage',
-    city: 'texas',
-    state: 'ST',
-    photo: this.baseUrl, // Corregido
-    availableUnits: 10000000,
-    wifi: true,
-    laundry: false,
-  };
+  constructor() {
+    this.housingLocationList = this.housingService.getAllHousingLocation();
+  }
 }
