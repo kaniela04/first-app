@@ -1,5 +1,5 @@
 .listing {
-  background: #f3f3f3; /* Color de fondo */
+  background: #f3f3f3; /* Color de fondo con las imagenes */
   border-radius: 15px; /* Bordes redondeados */
   overflow: hidden; /* Evita que el contenido sobresalga */
   width: 250px; /* Ajusta el tamaño */
@@ -27,13 +27,13 @@
 .listing-heading {
   font-size: 16px;
   font-weight: bold;
-  color: #4a4a4a;
+  color: #4a4a4a;/* color texto dentro de las cajas*/
   margin: 5px 0;
 }
 
 .listing-location {
   font-size: 14px;
-  color: #666;
+  color: #666;/* color texto que espicifica la ubicacion*/
   display: flex;
   align-items: center;
   justify-content: center;

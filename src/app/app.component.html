@@ -1,5 +1,5 @@
 <main>
-  <header class="header-container">
+  <header class="header-container" [routerLink]="['/']">
     <img
       class="brand-logo"
       alt="logo"
@@ -8,7 +8,7 @@
     <h1>BIENVENIDOS A ARRENDA-HOME</h1>
   </header>
   <section>
-    <app-home></app-home>
+    <router-outlet></router-outlet>
   </section>
 </main>
-<router-outlet></router-outlet>
+
