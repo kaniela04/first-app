@@ -12,7 +12,11 @@
         </h2>
         <p class="listing-location">
           <span class="location-icon"> 📍</span>
-          {{ housingLocation.city }}, {{ housingLocation.state }}
+          {{ housingLocation.city }}, {{ housingLocation.state }}  
         </p>
+        <!--aqui se usan las rutas en base al id para que al hacer click muestre la ventana de detalles de cada uno-->
+        <a routerLink="details/{{ housingLocation.id }}" class="details-link">
+          Detalles aqui</a>
+          
       </div>
     </section>

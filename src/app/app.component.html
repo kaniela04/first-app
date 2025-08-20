@@ -1,11 +1,14 @@
 <main>
-  <header class="header-container" [routerLink]="['/']">
-    <img
-      class="brand-logo"
-      alt="logo"
-      src="https://www.freepnglogos.com/uploads/logo-home-png/logo-lake-county-home-show-april-lake-county-24.png"
-    />
-    <h1>BIENVENIDOS A ARRENDA-HOME</h1>
+  <header class="header-container">
+    <a [routerLink]="['/']" style="text-decoration: none; color: inherit;">
+      <img
+        class="brand-logo"
+        alt="logo"
+        src="https://www.freepnglogos.com/uploads/logo-home-png/logo-lake-county-home-show-april-lake-county-24.png"
+      />
+      <h1>BIENVENIDOS A ARRENDA-HOME</h1>
+    </a>
+    
   </header>
   <section>
     <router-outlet></router-outlet>

@@ -14,6 +14,7 @@ const routeConfig: Routes = [
       component: DetailsComponent,
       title: 'Home details',
       /*en este caso, el id es dinamico y cambiara en funcion de como el codigo solicite la ruta */
+      
     },
-  ];
+      ];
   export default routeConfig;

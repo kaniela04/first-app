@@ -15,19 +15,25 @@ import { text } from 'node:stream/consumers';
 export class HomeComponent {
   housingService = inject(HousingService); //  Inyección del servicio
   housingLocationList: Housinglocation[] = [];
-  filteredLocationList:Housinglocation[]=[]
+  filteredLocationList:Housinglocation[]=[];
+  
   constructor() {
     this.housingLocationList = this.housingService.getAllHousingLocation();
     this.filteredLocationList=this.housingLocationList;
+    this.filteredLocationList=this.housingLocationList;
   }
-
+//funcion de filtrado
 filterResults(text: string) {
   if (!text) {
     this.filteredLocationList = this.housingLocationList;
     return;
   }
   this.filteredLocationList = this.housingLocationList.filter((housingLocation) =>
-    housingLocation?.city.toLowerCase().includes(text.toLowerCase()),
+    housingLocation?.city.toLowerCase().includes(text.toLowerCase()) ||
+    housingLocation?.name.toLowerCase().includes(text.toLowerCase())
   );
-}
+
+ 
+  }
+
 }
